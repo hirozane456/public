@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApplication_KinectAudioSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Width="525" SizeToContent="Height">
+    <StackPanel>
+        <GroupBox Header="Target angle" Margin="10" Background="AliceBlue">
+            <Label x:Name="Label_Targetangle" Content="Targetangle : 0"/>
+        </GroupBox>
+        <GroupBox Header="CurrentState" Margin="10" Background="AliceBlue">
+            <StackPanel>
+                <Button Content="GetCurrentAngle" Click="Button_Click" />
+                <Label x:Name="Label_SoundSourceAngle" Content="SoundSourceAngle : 0"/>
+                <Label x:Name="Label_SoundSourceAngleConfidence" Content="SoundSourceAngleConfidence : 0"/>
+                <Label x:Name="Label_BeamAngle" Content="BeamAngle : 0"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="SoundSourceAngleChanged" Margin="10" Background="AliceBlue" >
+            <StackPanel>
+                <Label x:Name="Label_SoundSourceAngleChanged_Angle" Content="Angle : 0"/>
+                <Label x:Name="Label_SoundSourceAngleChanged_Confidence" Content="Confidence : 0"/>
+                <Label x:Name="Label_compare" Content="result : 0"/>
+                <Slider x:Name="Slider_SoundSourceAngleChanged_Angle" SmallChange="1" Minimum="-50" Maximum="50"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="BeamAngleChanged" Margin="10" Background="AliceBlue">
+            <StackPanel>
+                <Label x:Name="Label_BeamAngleChanged_Angle" Content="Angle : 0" Height="27"/>
+                <Slider x:Name="Slider_BeamAngleChanged_Angle" SmallChange="1" Minimum="-50" Maximum="50"/>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Window>
